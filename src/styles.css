@@ -179,5 +179,53 @@ body {
         border-radius: 50%;
       }
     }
+    .upper {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      margin-top: 24px;
+
+      #backButtonContainer {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        span {
+          margin-left: 24px;
+          font-size: var(--font-size-medium);
+        }
+        span:hover {
+          border-radius: 50%;
+          background-color: black;
+          color: var(--background-color);
+        }
+      }
+      #upperInfo {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        img {
+          height: 320px;
+          width: 320px;
+          border-radius: 50%;
+        }
+        p {
+          text-align: center;
+          font-size: var(--font-size-medium);
+          font-weight: 600;
+        }
+      }
+    }
+    .lower {
+      display: flex;
+      flex-direction: column;
+      margin-left: 8vw;
+      margin-top: 16vh;
+      gap: 32px;
+      p {
+        font-size: var(--font-size-small);
+      }
+    }
   }
 }
