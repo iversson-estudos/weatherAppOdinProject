@@ -127,3 +127,51 @@ table {
   border-spacing: 0;
 }
 /*END OF CSS RESET*/
+
+:root {
+  --font-family: "Oswald";
+  --background-color: #82a2fa;
+  --font-size-big: 64px;
+  --font-size-medium: 48px;
+  --font-size-small: 32px;
+}
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+
+  input,
+  textarea,
+  button,
+  select {
+    font-family: inherit; /* Inherit the font from the body */
+  }
+
+  #main {
+    .selectLocation {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      gap: 16px;
+
+      input,
+      label,
+      span {
+        font-size: var(--font-size-big);
+      }
+      input {
+        outline: 4px solid black;
+      }
+      span {
+        padding: 4px;
+        cursor: pointer;
+      }
+      span:hover {
+        color: var(--background-color);
+        background-color: black;
+        border-radius: 50%;
+      }
+    }
+  }
+}
