@@ -147,6 +147,13 @@ body {
   }
 
   #main {
+    input,
+    label,
+    span {
+      cursor: pointer;
+      user-select: none;
+    }
+
     .selectLocation {
       display: flex;
       flex-direction: column;
@@ -165,7 +172,6 @@ body {
       }
       span {
         padding: 4px;
-        cursor: pointer;
       }
       span:hover {
         color: var(--background-color);
