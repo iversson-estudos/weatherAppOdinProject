@@ -1,7 +1,12 @@
 import { addEventsResultPage } from "../events/eventListeners";
+import { populateFields } from "../events/populateFields";
 
 function resultPage() {
   const mainContainer = document.getElementById("main");
+  /*SAVES LOCATION TO CALL SEARCH */
+  const location = document.getElementsByClassName("userSearch")[0].value;
+
+  /* VIEW WITHOUT FIELDS POPULATED */
   mainContainer.innerHTML = `
     <div class="upper">
       <div id="backButtonContainer">
@@ -11,17 +16,20 @@ function resultPage() {
       </div>
       <div id="upperInfo">
         <img id="weatherImg" src='https://fakeimg.pl/160x160'></img>
-        <p id="cityName">BURGRES</p>
+        <p id="address"></p>
       </div>
     </div>
     <div class="lower">
-      <p id="dateAndInfo">Today is 11/11 and Is gonna Rain</p>
-      <p id="minTemp">Minimum Temperature 18 Cº</p>
-      <p id="maxTemp">Maximum Temperature 34 Cº</p>
-      <p id="prepProb">Precipitation Probability is 83%</p>
+      <p id="conditions"></p>
+      <p id="minTemp"></p>
+      <p id="maxTemp"></p>
+      <p id="precProb"></p>
     </div>
     `;
 
+  /*POPULATE THE FIELDS */
+  populateFields(location);
+  /*ADD EVENTS LISTENERS */
   addEventsResultPage();
 }
 
