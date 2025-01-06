@@ -1,3 +1,5 @@
+import { addEventsResultPage } from "../events/eventListeners";
+
 function resultPage() {
   const mainContainer = document.getElementById("main");
   mainContainer.innerHTML = `
@@ -19,6 +21,8 @@ function resultPage() {
       <p id="prepProb">Precipitation Probability is 83%</p>
     </div>
     `;
+
+  addEventsResultPage();
 }
 
 export { resultPage };
