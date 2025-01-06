@@ -1,10 +1,11 @@
 import "./styles.css";
 import { mainView } from "./views/mainView";
 import { requestAPI } from "./API/request";
-import { jsonToObject } from "./API/jsonToObject";
+import { filterData } from "./API/filterData";
 
 mainView();
 
 const response = requestAPI("Cascavel").then((result) => {
-  console.log(result);
+  const filteredData = filterData(result);
+  console.log(filteredData);
 });
