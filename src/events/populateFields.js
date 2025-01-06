@@ -10,12 +10,15 @@ async function populateFields(location) {
   const maxTemp = document.getElementById("maxTemp");
   const precProb = document.getElementById("precProb");
   const address = document.getElementById("address");
+  /*ICON */
+  const icon = document.getElementById("weatherIcon");
 
   /*POPULATE THEM */
-  conditions.textContent = response.conditions;
-  minTemp.textContent = response.minTemp;
-  maxTemp.textContent = response.maxTemp;
-  precProb.textContent = response.precProb;
+  conditions.textContent = "Today is " + response.conditions.toLowerCase();
+  minTemp.textContent = "Minimum temperature: " + response.minTemp;
+  maxTemp.textContent = "Maximum temperature: " + response.maxTemp;
+  precProb.textContent = "Probability of precipitation: " + response.precProb;
   address.textContent = response.address;
+  icon.textContent = "partly_cloudy_day";
 }
 export { populateFields };

@@ -15,7 +15,10 @@ function resultPage() {
         </span>
       </div>
       <div id="upperInfo">
-        <img id="weatherImg" src='https://fakeimg.pl/160x160'></img>
+      <span id="weatherIconContainer" class="material-symbols-outlined">
+          <span id="weatherIcon"></span>
+      </span>
+
         <p id="address"></p>
       </div>
     </div>
