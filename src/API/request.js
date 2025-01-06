@@ -20,11 +20,10 @@ async function requestAPI(location) {
 
   try {
     const response = await fetch(query, {
-      method: "GET",
-      headers: {},
+      mode: "cors",
     });
-    const data = await response.json();
-    return data;
+    const weather = await response.json();
+    return weather;
   } catch (err) {
     console.error(err);
     throw err;
