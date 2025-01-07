@@ -3,8 +3,14 @@ import { mainView } from "../views/mainView";
 
 function addEventsMainView() {
   const span = document.getElementById("searchButton");
+
   span.addEventListener("click", () => {
-    resultPage();
+    const input = document.getElementsByClassName("userSearch")[0];
+    if (input.value == "") {
+      input.classList.add("error");
+    } else {
+      resultPage();
+    }
   });
 }
 

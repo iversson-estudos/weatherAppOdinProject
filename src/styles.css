@@ -170,6 +170,9 @@ body {
       input {
         outline: 4px solid black;
       }
+      input.error {
+        outline: 4px solid red;
+      }
       span {
         padding: 4px;
       }

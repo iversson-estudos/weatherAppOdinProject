@@ -4,8 +4,9 @@ function filterData(data) {
   const maxTemp = data.days[0].tempmax;
   const minTemp = data.days[0].tempmin;
   const precProb = data.days[0].precipprob;
+  const icon = data.days[0].icon;
 
-  return { address, conditions, maxTemp, minTemp, precProb };
+  return { address, conditions, icon, maxTemp, minTemp, precProb };
 }
 
 export { filterData };

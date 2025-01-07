@@ -1,5 +1,6 @@
 import { filterData } from "../API/filterData";
 import { requestAPI } from "../API/request";
+import { weatherIconPicker } from "./weatherIconPicker";
 
 async function populateFields(location) {
   /*REQUEST DATA*/
@@ -10,8 +11,6 @@ async function populateFields(location) {
   const maxTemp = document.getElementById("maxTemp");
   const precProb = document.getElementById("precProb");
   const address = document.getElementById("address");
-  /*ICON */
-  const icon = document.getElementById("weatherIcon");
 
   /*POPULATE THEM */
   conditions.textContent = "Today is " + response.conditions.toLowerCase();
@@ -19,6 +18,7 @@ async function populateFields(location) {
   maxTemp.textContent = "Maximum temperature: " + response.maxTemp;
   precProb.textContent = "Probability of precipitation: " + response.precProb;
   address.textContent = response.address;
-  icon.textContent = "partly_cloudy_day";
+
+  weatherIconPicker(response.icon);
 }
 export { populateFields };
